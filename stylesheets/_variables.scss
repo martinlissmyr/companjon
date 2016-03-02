@@ -1,0 +1,22 @@
+
+// Colors
+$warmGray: #f5f8fa;
+$borderColor: lighten(#CFD8DC, 5%);
+$borderColorLight: lighten($borderColor, 10%);
+$green: #558B2F;
+$greenLight: lighten(#F1F8E9, 4%);
+$purple: #D81B60;
+$blue: #2196F3;
+$red: #C62828;
+
+$textColor: #333;
+$textColorMedium: #666;
+$textColorLight: #999;
+
+$linkColor: $blue;
+$linkColorHover: darken($blue, 10%);
+
+// Fonts
+$defaultFont: "Merriweather Sans", "Arial", sans-serif;
+$headingFont: "Merriweather Sans", "Georgia", "Serif";
+$defaultFontSize: 15px;

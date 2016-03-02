@@ -1,0 +1,43 @@
+.button {
+  line-height: 30px;
+  display: inline-block;
+  padding: 0 10px;
+  text-decoration: none;
+  border-radius: 3px;
+  font-weight: bold;
+  color: #666;
+  background: darken($warmGray, 3%);
+  border: 1px solid transparent;
+
+  &:hover {
+    background-color: darken($warmGray, 6%);
+    color: #555;
+  }
+}
+
+.button--primary {
+  background: $blue;
+  color: white;
+
+  &:hover {
+    color: white;
+    background-color: darken($blue, 5%);
+  }
+}
+
+.button--transparent {
+  background: rgba(0,0,0,.01);
+  border: 1px solid rgba(0,0,0,.05);
+
+  &:hover {
+    background: rgba(0,0,0,.03);
+  }
+}
+
+.button--yes {
+  color: $green;
+}
+
+.button--no {
+  color: $red;
+}

@@ -1,0 +1,290 @@
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Flock</title>
+  <meta name="description" content="Flock it!">
+  <link href="https://fonts.googleapis.com/css?family=Dosis:400,600|Merriweather+Sans:300,400" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/stylesheets/main.css">
+</head>
+<body>
+  <div class="trip">
+
+    <div class="trip-header">
+      <div class="trip-header__image" style="background-image: url(/hero/{{place}}+{{country}});">
+        <div class="trip-header__image__cover"></div>
+        <div class="trip-header__content">
+          <h1 class="trip-header__heading">
+            {{place}}, {{country}}
+            <span class="trip-header__heading__date">
+              24 feb - 28 feb 2016
+            </span>
+          </h1>
+        </div>
+      </div>
+
+      <div class="trip-header__tools">
+        <div class="trip-header__tools__content">
+          <div class="trip-header__tools__item">
+            {{> _participants }}
+          </div>
+          <div class="trip-header__tools__item trip-header__tools__item--align-right">
+            <a href="" class="button">Add Traveller</a>
+            <a href="" class="button">Edit Trip</a>
+            <a href="" class="button button--primary">Add plans</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="trip-events">
+
+      <div class="day">
+        Wednesday 24 feb
+      </div>
+
+      {{#> _card type="train" }}
+        <div class="card__header">
+          {{> _card-date time="08:45" zone="CET" }}
+          {{> _card-participants }}
+          <div class="card__heading">
+            {{> _card-icon }}
+            <div class="card__heading__content">
+              <h2 class="card__heading__title">Centralen to Arlanda</h2>
+              <div class="card__heading__description">Train, Confirmation # ZGQNUF</div>
+            </div>
+          </div>
+        </div>
+        <div class="card__nuggets">
+          <div class="card__nugget">
+            <div class="card__nugget__label">Depart</div>
+            <div class="card__nugget__value">10:35 <span class="subtle">CET</span></div>
+          </div>
+          <div class="card__nugget">
+            <div class="card__nugget__label">Arrive</div>
+            <div class="card__nugget__value">10:55 <span class="subtle">CET</span></div>
+          </div>
+          <div class="card__nugget">
+            <div class="card__nugget__label">Duration</div>
+            <div class="card__nugget__value">20m</div>
+          </div>
+        </div>
+        {{> _card-comments comments=true}}
+      {{/_card}}
+
+      {{#> _card type="flight" }}
+        <div class="card__header">
+          {{> _card-date time="10:35" zone="CET" }}
+          {{> _card-participants }}
+          <div class="card__heading">
+            {{> _card-icon }}
+            <div class="card__heading__content">
+              <h2 class="card__heading__title">Arlanda (ARN) to Tegel (TXL)</h2>
+              <div class="card__heading__description">Flight AB453, Confirmation # ZGQNUF</div>
+            </div>
+          </div>
+        </div>
+        <div class="card__nuggets">
+          <div class="card__nugget">
+            <div class="card__nugget__label">Depart</div>
+            <div class="card__nugget__value">10:35 <span class="subtle">CET</span></div>
+          </div>
+          <div class="card__nugget">
+            <div class="card__nugget__label">Arrive</div>
+            <div class="card__nugget__value">12:10 <span class="subtle">CET</span></div>
+          </div>
+          <div class="card__nugget">
+            <div class="card__nugget__label">Duration</div>
+            <div class="card__nugget__value">1h 35m</div>
+          </div>
+        </div>
+        {{> _card-comments}}
+      {{/_card}}
+
+      <div class="plan-suggestion">
+        Add plans for airport transfer?
+        <a href="#" class="yes-link">Yes please!</a>
+        <a href="#" class="no-link">No thanks...</a>
+      </div>
+
+      {{#> _card type="food" }}
+        <div class="card__header">
+          {{> _card-date time="18:30" zone="CET" }}
+          {{> _card-participants }}
+          <div class="card__heading">
+            {{> _card-icon }}
+            <div class="card__heading__content">
+              <h2 class="card__heading__title">Treehouse restaurant</h2>
+              <div class="card__heading__description">The Alnwick Garden, Denwick Lane, Alnwick, Northumberland NE66 1YU</div>
+            </div>
+          </div>
+        </div>
+        <div class="card__nuggets">
+          <div class="card__nugget">
+            <div class="card__nugget__label">Link</div>
+            <div class="card__nugget__value"><a href="https://foursquare.com/v/treehouse-restaurant/4bb72072ef159c7434d576f7" class="text-link" target="_blank">Foursquare page</a></div>
+          </div>
+          <div class="card__nugget">
+            <div class="card__nugget__label">Phone #</div>
+            <div class="card__nugget__value">01665 511852</div>
+          </div>
+          <div class="card__nugget">
+            <div class="card__nugget__label">Party Size</div>
+            <div class="card__nugget__value">6</div>
+          </div>
+        </div>
+        {{> _card-comments}}
+      {{/_card}}
+
+      <div class="day">
+        Thursday 25 feb
+      </div>
+
+      {{#> _card type="bus" }}
+        <div class="card__header">
+          {{> _card-date time="09:30" zone="CET" }}
+          {{> _card-participants }}
+          <div class="card__heading">
+            {{> _card-icon }}
+            <div class="card__heading__content">
+              <h2 class="card__heading__title">Berlin Alexanderplatz to Potsdamerplatz</h2>
+              <div class="card__heading__description">Bus 322</div>
+            </div>
+          </div>
+        </div>
+        <div class="card__nuggets">
+          <div class="card__nugget">
+            <div class="card__nugget__label">Depart</div>
+            <div class="card__nugget__value">09:30 <span class="subtle">CET</span></div>
+          </div>
+          <div class="card__nugget">
+            <div class="card__nugget__label">Arrive</div>
+            <div class="card__nugget__value">09:55 <span class="subtle">CET</span></div>
+          </div>
+          <div class="card__nugget">
+            <div class="card__nugget__label">Duration</div>
+            <div class="card__nugget__value">25m</div>
+          </div>
+        </div>
+        {{> _card-comments}}
+      {{/_card}}
+
+      {{#> _card type="food" suggestion=true }}
+        <div class="card__header">
+          {{> _card-date time="12:00" zone="CET" }}
+          {{> _card-participants }}
+          <div class="card__heading">
+            {{> _card-icon }}
+            <div class="card__heading__content">
+              <h2 class="card__heading__title">Var ska vi äta lunch?</h2>
+              <div class="card__heading__description">
+                Poll by Gustaf Forsslund
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card__suggestions">
+          <div class="card__suggestions__suggestion">
+            <div class="card__suggestions__suggestion__title">
+              <a class="text-link card__suggestions__suggestion__link" href="https://foursquare.com/v/lebensmittel-in-mitte/4b0d8651f964a520304a23e3" target="_blank">Lebensmittel in Mitte</a>
+              <span class="card__suggestions__suggestion__votes">1 yes, 1 no</span>
+            </div>
+            <div class="card__suggestions__suggestion__vote">
+              <a class="button button--yes button--transparent" href="#">Yes</a>
+              <a class="button button--no button--transparent" href="#">No</a>
+              <a class="button button--transparent" href="#">I'm neutral</a>
+            </div>
+          </div>
+          <div class="card__suggestions__suggestion">
+            <div class="card__suggestions__suggestion__title">
+              <a class="text-link card__suggestions__suggestion__link" href="https://foursquare.com/v/markthalle-neun/4ca85d4ef47ea1434a587421" target="_blank">Markthalle Neun</a>
+              <span class="card__suggestions__suggestion__votes">2 yes, 1 neutral</span>
+            </div>
+            <div class="card__suggestions__suggestion__vote">
+              <span class="card__suggestions__suggestion__vote__done">You voted yes. <a href="#">Change?</a></span>
+            </div>
+          </div>
+          <div class="card__suggestions__suggestion__add">
+            <a class="card__suggestions__suggestion__add__link" href="#">Add suggestion</a>
+          </div>
+        </div>
+        {{> _card-comments}}
+      {{/_card}}
+
+      {{#> _card type="car" }}
+        <div class="card__header">
+          {{> _card-date time="13:30" zone="CET" }}
+          {{> _card-participants }}
+          <div class="card__heading">
+            {{> _card-icon }}
+            <div class="card__heading__content">
+              <h2 class="card__heading__title">Potsdamerplatz to Potsdam</h2>
+              <div class="card__heading__description">Car</div>
+            </div>
+          </div>
+        </div>
+        <div class="card__nuggets">
+          <div class="card__nugget">
+            <div class="card__nugget__label">Depart</div>
+            <div class="card__nugget__value">13:30 <span class="subtle">CET</span></div>
+          </div>
+          <div class="card__nugget">
+            <div class="card__nugget__label">Arrive</div>
+            <div class="card__nugget__value">13:55 <span class="subtle">CET</span></div>
+          </div>
+          <div class="card__nugget">
+            <div class="card__nugget__label">Duration</div>
+            <div class="card__nugget__value">25m</div>
+          </div>
+        </div>
+        {{> _card-comments}}
+      {{/_card}}
+
+      <div class="plan-suggestion">
+        Add plans for dinner?
+        <a href="#" class="yes-link">Yes please!</a>
+        <a href="#" class="yes-link">Create poll...</a>
+        <a href="#" class="no-link">No thanks...</a>
+      </div>
+
+      {{#> _card type="activity" }}
+        <div class="card__header">
+          {{> _card-date time="20:00" zone="CET" }}
+          {{> _card-participants }}
+          <div class="card__heading">
+            {{> _card-icon }}
+            <div class="card__heading__content">
+              <h2 class="card__heading__title">Teater</h2>
+              <div class="card__heading__description">Bananastrasse 56, 34131 Berlin Mitte</div>
+            </div>
+          </div>
+        </div>
+        {{> _card-comments}}
+      {{/_card}}
+
+      {{#> _card type="nightlife" }}
+        <div class="card__header">
+          {{> _card-date time="22:30" zone="CET" }}
+          {{> _card-participants }}
+          <div class="card__heading">
+            {{> _card-icon }}
+            <div class="card__heading__content">
+              <h2 class="card__heading__title">Kerri Chandler @ Partajenklubben</h2>
+              <div class="card__heading__description">Partajenstrasse 21, 232 22 Berlin Kreuzberg</div>
+            </div>
+          </div>
+        </div>
+        {{> _card-comments}}
+      {{/_card}}
+
+      <div class="day">
+        Friday 26 feb
+      </div>
+
+      <div class="plan-suggestion">
+        Add some plans?
+        <a href="#" class="yes-link">Yes please!</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

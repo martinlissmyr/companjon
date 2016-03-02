@@ -1,0 +1,212 @@
+.card {
+  margin: 0 10px 10px 10px;
+}
+
+.card__inner {
+  border: 1px solid $borderColor;
+  border-radius: 5px;
+  background: white;
+  overflow: hidden;
+
+  .card--suggestion & {
+    background: $greenLight;
+    border-color: darken($greenLight, 15%);
+  }
+}
+
+.card__header {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 15px;
+}
+
+.card__date {
+  margin: 0 0 10px 0;
+}
+
+.card__date__time {
+  font-weight: bold;
+}
+
+.card__participants {
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: auto;
+  margin: -3px 0;
+
+  .participants {
+    float: right;
+  }
+}
+
+.card__icon {
+  display: inline-block;
+  height: 55px;
+  width: 55px;
+  background: $purple;
+  border-radius: 3px;
+  padding: 7px;
+  box-sizing: border-box;
+  margin: 0 10px 0 0;
+  flex-grow: 0;
+  flex-shrink: 0;
+  color: white;
+
+  .card--suggestion & {
+    background-color: $green;
+  }
+
+  svg {
+    height: 100%;
+    width: 100%;
+    fill: currentColor;
+  }
+}
+
+.card__heading {
+  flex-basis: 100%;
+  display: flex;
+}
+
+.card__heading__title {
+  font-size: 30px;
+  line-height: 1.1;
+  color: #333;
+  font-family: $headingFont;
+  font-weight: 300;
+
+  .card--suggestion & {
+    color: $green;
+  }
+
+}
+
+.card__heading__description {
+  margin-top: 3px;
+}
+
+.card__suggestions {
+  counter-reset: section;
+}
+
+.card__suggestions__suggestion__add,
+.card__suggestions__suggestion {
+  border-top: 1px dashed rgba(0, 0, 0, 0.07);
+  padding: 15px;
+}
+
+.card__suggestions__suggestion {
+  display: flex;
+  flex-direction: row;
+  counter-increment: section;
+}
+
+.card__suggestions__suggestion__title {
+  flex-grow: 0;
+  flex-shrink: 1;
+}
+
+.card__suggestions__suggestion__vote {
+  flex-grow: 1;
+  flex-shrink: 0;
+  text-align: right;
+}
+
+.card__suggestions__suggestion__vote__yes {
+  color: $green;
+  margin-right: 10px;
+}
+
+.card__suggestions__suggestion__vote__no {
+  color: $red;
+  margin-right: 10px;
+}
+
+.card__suggestions__suggestion__vote__done {
+  color: $textColorMedium;
+}
+
+.card__suggestions__suggestion__link {
+  font-size: 20px;
+
+  &:before {
+    color: $textColor;
+    content: counter(section, upper-alpha) ". ";
+  }
+}
+
+.card__suggestions__suggestion__votes {
+  display: block;
+  color: $textColorMedium;
+}
+
+.card__nuggets {
+  padding: 0 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.card__nugget {
+  margin: 0 0 15px 0;
+  flex-basis: 33%;
+  font-weight: 400;
+}
+
+.card__nugget__label {
+  color: #999;
+  text-transform: uppercase;
+  margin: 0 0 2px 0;
+  font-weight: 300;
+}
+
+.card__comments {
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  padding: 15px;
+  background: lighten(#CFD8DC, 15%);
+
+  .card--suggestion & {
+    background: darken($greenLight, 1%);
+  }
+}
+
+.card__comments__new,
+.card__comments__comment {
+  display: flex;
+
+  .avatar {
+    margin-right: 7px;
+    flex-grow: 0;
+    flex-shrink: 0;
+  }
+
+  .input,
+  .card__comments__comment__text {
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: 1px;
+  }
+}
+
+.card__comments__comment__text {
+  p {
+    line-height: 1.35;
+    color: $textColorMedium;
+  }
+}
+
+.card__comments__comment {
+  margin: 0 0 15px 0;
+}
+
+.card__comments__comment__name {
+  display: block;
+  font-weight: bold;
+  color: $green;
+
+  span {
+    color: $textColorLight;
+    font-weight: normal;
+  }
+}

@@ -1,0 +1,58 @@
+.card {
+  margin: 0 0 15px 0; }
+
+.card__inner {
+  border: 1px solid #CFD8DC;
+  border-radius: 3px;
+  background: white; }
+
+.card__header {
+  margin: 0 0 20px 0;
+  padding: 15px 15px 13px 15px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05); }
+
+.card__date {
+  margin: 0 0 2px 0;
+  font-weight: bold; }
+  .card__date .subtle {
+    color: #7CB342; }
+
+.card__date__time {
+  background: #33691E;
+  color: #fff;
+  padding: 0 4px;
+  border-radius: 2px;
+  display: inline-block;
+  line-height: 20px;
+  margin: 0 5px 0 0; }
+
+.card__address {
+  padding: 0 15px 15px 15px; }
+
+.card__heading {
+  font-size: 34px;
+  color: #333;
+  font-family: "Playfair Display", "Georgia", "Serif"; }
+
+.card__nuggets {
+  padding: 0 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; }
+
+.card__nugget {
+  margin: 0 0 15px 0;
+  flex-basis: 33%; }
+
+.card__nugget__label {
+  color: #558B2F;
+  text-transform: uppercase;
+  margin: 0 0 2px 0; }
+
+.card__comments {
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  padding: 15px; }
+  .card__comments .avatar {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px; }

@@ -1,0 +1,12 @@
+.trip-header {
+  max-width: 800px;
+  margin: 40px auto; }
+
+.trip-header__heading {
+  font-size: 54px;
+  color: #333;
+  font-family: "Playfair Display", "Georgia", "Serif"; }
+
+.trip-header__heading__date {
+  font-weight: normal;
+  color: #D81B60; }

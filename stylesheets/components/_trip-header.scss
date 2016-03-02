@@ -1,0 +1,71 @@
+.trip-header {
+  margin: 0 0 30px 0;
+}
+
+.trip-header__image {
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+
+.trip-header__image__cover {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 200px;
+  background: linear-gradient(0deg, rgba(0,0,0,0.5), transparent);
+}
+
+.trip-header__content {
+  height: 300px;
+  max-width: 700px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.trip-header__heading {
+  position: absolute;
+  bottom: 15px;
+  left: 0;
+  right: 0;
+  font-size: 45px;
+  color: white;
+  font-weight: 900;
+  font-family: $headingFont;
+}
+
+.trip-header__heading__date {
+  font-weight: normal;
+  font-size: 20px;
+}
+
+.trip-header__tools {
+  background: white;
+  border-bottom: 1px solid $borderColor;
+}
+
+.trip-header__tools__content {
+  max-width: 700px;
+  margin: 0 auto;
+  display: flex;
+}
+
+.trip-header__tools__item--align-right {
+  justify-content: flex-end;
+}
+
+.trip-header__tools__item {
+  padding: 15px 0;
+  display: flex;
+  flex-grow: 1;
+
+  .button + .button {
+    margin: 0 0 0 5px;
+  }
+}
+
+.trip-header__tools__label {
+  line-height: 32px;
+  margin: 0 10px 0 0;
+}

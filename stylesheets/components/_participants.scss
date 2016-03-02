@@ -1,0 +1,24 @@
+.participants {
+  overflow: hidden;
+
+  .avatar {
+    cursor: pointer;
+    float: left;
+    margin-left: -15px;
+    transition: margin .2s;
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+
+  &:hover {
+    .avatar {
+      margin-left: 2px;
+
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+  }
+}

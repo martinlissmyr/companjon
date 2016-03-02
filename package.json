@@ -1,0 +1,33 @@
+{
+  "name": "flock",
+  "version": "0.0.1",
+  "private": true,
+  "config": {
+    "port": 3000,
+    "sass_include_path": "./stylesheets",
+    "sass_source_path": "./stylesheets",
+    "sass_target_path": "./public/stylesheets"
+  },
+  "scripts": {
+    "start": "node server/server.js",
+    "start:dev": "npm run build:dev & NODE_ENV=development PORT=$npm_package_config_port nodemon server.js",
+    "build:sass": "node-sass $npm_package_config_sass_source_path -o $npm_package_config_sass_target_path --recursive false --include-path $npm_package_config_sass_include_path",
+    "watch:sass": "npm run build:sass -- -w",
+    "build:icons": "node build-icons.js",
+    "build:dev": "npm run build:icons & npm run build:sass & npm run watch:sass"
+  },
+  "engines": {
+    "node": "~4.2.0"
+  },
+  "dependencies": {
+    "flickrapi": "~0.4.1",
+    "express": "~4.13.4",
+    "express-handlebars": "~3.0.0",
+    "node-sass": "~3.4.2",
+    "request": "~2.69.0",
+    "nodemon": "latest",
+    "svgo": "~0.6.1",
+    "fs-extra": "~0.26.5",
+    "require-all": "~2.0.0"
+  }
+}

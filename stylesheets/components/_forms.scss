@@ -1,0 +1,13 @@
+.input {
+  padding: 8px;
+  line-height: 1.2;
+  border: 1px solid $borderColor;
+  resize: none;
+  font-family: $defaultFont;
+  font-size: $defaultFontSize;
+
+  &:focus {
+    border-color: lighten($green, 15%);
+    outline: none;
+  }
+}
