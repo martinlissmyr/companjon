@@ -41,8 +41,7 @@
 }
 
 .trip-header__tools {
-  background: white;
-  border-bottom: 1px solid $borderColor;
+  border-bottom: 1px solid darken($borderColor, 3%);
 }
 
 .trip-header__tools__content {

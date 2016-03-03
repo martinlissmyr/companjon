@@ -3,10 +3,10 @@
   <meta charset="utf-8">
   <title>Flock</title>
   <meta name="description" content="Flock it!">
-  <link href="https://fonts.googleapis.com/css?family=Dosis:400,600|Merriweather+Sans:300,400" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:300,400" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="/stylesheets/main.css">
 </head>
-<body>
+<body data-sticky-header="hidden">
   <div class="trip">
 
     <div class="trip-header">
@@ -28,8 +28,8 @@
             {{> _participants }}
           </div>
           <div class="trip-header__tools__item trip-header__tools__item--align-right">
-            <a href="" class="button">Add Traveller</a>
-            <a href="" class="button">Edit Trip</a>
+            <a href="" class="button button--transparent">Add Traveller</a>
+            <a href="" class="button button--transparent">Edit Trip</a>
             <a href="" class="button button--primary">Add plans</a>
           </div>
         </div>
@@ -68,7 +68,7 @@
             <div class="card__nugget__value">20m</div>
           </div>
         </div>
-        {{> _card-comments comments=true}}
+        {{> _card-comments comments=false}}
       {{/_card}}
 
       {{#> _card type="flight" }}
@@ -100,11 +100,13 @@
         {{> _card-comments}}
       {{/_card}}
 
-      <div class="plan-suggestion">
-        Add plans for airport transfer?
-        <a href="#" class="yes-link">Yes please!</a>
-        <a href="#" class="no-link">No thanks...</a>
-      </div>
+      {{#> _card type="suggestion" }}
+        <div class="plan-suggestion">
+          Add plans for airport transfer?
+          <a href="#" class="yes-link">Yes please!</a>
+          <a href="#" class="no-link">No thanks...</a>
+        </div>
+      {{/_card}}
 
       {{#> _card type="food" }}
         <div class="card__header">
@@ -239,12 +241,14 @@
         {{> _card-comments}}
       {{/_card}}
 
-      <div class="plan-suggestion">
-        Add plans for dinner?
-        <a href="#" class="yes-link">Yes please!</a>
-        <a href="#" class="yes-link">Create poll...</a>
-        <a href="#" class="no-link">No thanks...</a>
-      </div>
+      {{#> _card type="suggestion" }}
+        <div class="plan-suggestion">
+          Add plans for dinner?
+          <a href="#" class="yes-link">Yes please!</a>
+          <a href="#" class="yes-link">Create poll...</a>
+          <a href="#" class="no-link">No thanks...</a>
+        </div>
+      {{/_card}}
 
       {{#> _card type="activity" }}
         <div class="card__header">
@@ -258,7 +262,7 @@
             </div>
           </div>
         </div>
-        {{> _card-comments}}
+        {{> _card-comments comments=true}}
       {{/_card}}
 
       {{#> _card type="nightlife" }}
@@ -280,10 +284,13 @@
         Friday 26 feb
       </div>
 
-      <div class="plan-suggestion">
-        Add some plans?
-        <a href="#" class="yes-link">Yes please!</a>
-      </div>
+      {{#> _card type="suggestion" }}
+        <div class="plan-suggestion">
+          Add some plans?
+          <a href="#" class="yes-link">Yes please!</a>
+        </div>
+      {{/_card}}
+
     </div>
 
     <div class="sticky-header">

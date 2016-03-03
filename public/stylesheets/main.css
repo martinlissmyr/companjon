@@ -35,8 +35,7 @@
   font-size: 20px; }
 
 .trip-header__tools {
-  background: white;
-  border-bottom: 1px solid #dee4e7; }
+  border-bottom: 1px solid #d5dde0; }
 
 .trip-header__tools__content {
   max-width: 700px;
@@ -58,28 +57,36 @@
   margin: 0 10px 0 0; }
 
 .card {
-  margin: 0 10px 10px 10px; }
+  margin: 0 10px 10px 10px;
+  border-radius: 5px;
+  border: 2px solid #d5dde0;
+  border-radius: 5px;
+  overflow: hidden; }
 
 .card__inner {
-  border: 1px solid #dee4e7;
-  border-radius: 5px;
   background: white;
   overflow: hidden; }
   .card--suggestion .card__inner {
-    background: #fbfdf8;
-    border-color: #d6eabe; }
+    background: #fbfdf8; }
 
 .card__header {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  padding: 15px; }
+  padding: 15px 15px 25px 15px; }
 
 .card__date {
   margin: 0 0 10px 0; }
+  .card__date .subtle {
+    color: #D81B60; }
+    .card--suggestion .card__date .subtle {
+      color: #558B2F; }
 
 .card__date__time {
-  font-weight: bold; }
+  font-weight: bold;
+  color: #D81B60; }
+  .card--suggestion .card__date__time {
+    color: #558B2F; }
 
 .card__participants {
   flex-grow: 1;
@@ -114,23 +121,25 @@
 
 .card__heading__title {
   font-size: 30px;
-  line-height: 1.1;
+  line-height: 33px;
   color: #333;
   font-family: "Merriweather Sans", "Georgia", "Serif";
-  font-weight: 300; }
+  font-weight: 600;
+  padding-right: 50px; }
   .card--suggestion .card__heading__title {
     color: #558B2F; }
 
 .card__heading__description {
-  margin-top: 3px; }
+  margin-top: 5px; }
 
 .card__suggestions {
-  counter-reset: section; }
+  counter-reset: section;
+  padding: 0 15px; }
 
 .card__suggestions__suggestion__add,
 .card__suggestions__suggestion {
-  border-top: 1px dashed rgba(0, 0, 0, 0.07);
-  padding: 15px; }
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  padding: 15px 0; }
 
 .card__suggestions__suggestion {
   display: flex;
@@ -139,7 +148,8 @@
 
 .card__suggestions__suggestion__title {
   flex-grow: 0;
-  flex-shrink: 1; }
+  flex-shrink: 1;
+  padding-left: 25px; }
 
 .card__suggestions__suggestion__vote {
   flex-grow: 1;
@@ -158,9 +168,14 @@
   color: #666; }
 
 .card__suggestions__suggestion__link {
-  font-size: 20px; }
+  font-size: 20px;
+  left: -25px;
+  position: relative; }
   .card__suggestions__suggestion__link:before {
-    color: #333;
+    display: inline-block;
+    width: 25px;
+    color: #558B2F;
+    font-weight: bold;
     content: counter(section, upper-alpha) ". "; }
 
 .card__suggestions__suggestion__votes {
@@ -209,7 +224,8 @@
 
 .card__comments__comment__text p {
   line-height: 1.35;
-  color: #666; }
+  color: #666;
+  font-weight: 300; }
 
 .card__comments__comment {
   margin: 0 0 15px 0; }
@@ -217,9 +233,9 @@
 .card__comments__comment__name {
   display: block;
   font-weight: bold;
-  color: #558B2F; }
+  color: #558B2F;
+  margin: 0 0 2px 0; }
   .card__comments__comment__name span {
-    color: #999;
     font-weight: normal; }
 
 .button {
@@ -244,8 +260,8 @@
     background-color: #0d8aee; }
 
 .button--transparent {
-  background: rgba(0, 0, 0, 0.01);
-  border: 1px solid rgba(0, 0, 0, 0.05); }
+  background: transparent;
+  border: 1px solid rgba(0, 0, 0, 0.07); }
   .button--transparent:hover {
     background: rgba(0, 0, 0, 0.03); }
 
@@ -295,8 +311,9 @@
 
 .day {
   margin: 30px 0 15px 0;
-  font-weight: bold;
-  font-size: 20px; }
+  font-weight: 300;
+  font-size: 20px;
+  text-transform: uppercase; }
 
 .sticky-header {
   position: fixed;
@@ -304,8 +321,7 @@
   left: 0;
   right: 0;
   background: white;
-  border-bottom: 1px solid #dee4e7;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  border-bottom: 2px solid #dee4e7;
   transition: top .3s ease; }
   [data-sticky-header="hidden"] .sticky-header {
     top: -54px; }
@@ -324,9 +340,10 @@
 .sticky-header__date {
   flex-grow: 1;
   flex-shrink: 0;
-  font-weight: bold;
+  font-weight: 300;
   font-size: 20px;
-  line-height: 33px; }
+  line-height: 33px;
+  text-transform: uppercase; }
 
 BODY,
 HTML {
@@ -362,17 +379,14 @@ a.no-link {
     color: #a82222; }
 
 .plan-suggestion {
-  margin: 0 10px 10px 10px;
-  font-weight: bold;
-  padding: 15px;
-  border: 1px solid #dee4e7;
-  border-radius: 3px; }
+  padding: 15px; }
   .plan-suggestion a {
     display: inline-block;
     margin-left: 10px; }
 
 .subtle {
-  color: #999; }
+  color: #999;
+  font-weight: 300; }
 
 .trip {
   background-size: cover;

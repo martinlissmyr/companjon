@@ -57,11 +57,7 @@ a.no-link {
 
 
 .plan-suggestion {
-  margin: 0 10px 10px 10px;
-  font-weight: bold;
   padding: 15px;
-  border: 1px solid $borderColor;
-  border-radius: 3px;
 
   a {
     display: inline-block;
@@ -71,6 +67,7 @@ a.no-link {
 
 .subtle {
   color: #999;
+  font-weight: 300;
 }
 
 .trip {

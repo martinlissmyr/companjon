@@ -1,16 +1,17 @@
 .card {
   margin: 0 10px 10px 10px;
+  border-radius: 5px;
+  border: 2px solid darken($borderColor, 3%);
+  border-radius: 5px;
+  overflow: hidden;
 }
 
 .card__inner {
-  border: 1px solid $borderColor;
-  border-radius: 5px;
   background: white;
   overflow: hidden;
 
   .card--suggestion & {
     background: $greenLight;
-    border-color: darken($greenLight, 15%);
   }
 }
 
@@ -18,15 +19,28 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  padding: 15px;
+  padding: 15px 15px 25px 15px;
 }
 
 .card__date {
   margin: 0 0 10px 0;
+
+  .subtle {
+    color: $purple;
+    .card--suggestion & {
+      color: $green;
+    }
+  }
 }
 
 .card__date__time {
   font-weight: bold;
+  color: $purple;
+
+  .card--suggestion & {
+    color: $green;
+  }
+
 }
 
 .card__participants {
@@ -71,10 +85,11 @@
 
 .card__heading__title {
   font-size: 30px;
-  line-height: 1.1;
-  color: #333;
+  line-height: 33px;
+  color: $textColor;
   font-family: $headingFont;
-  font-weight: 300;
+  font-weight: 600;
+  padding-right: 50px;
 
   .card--suggestion & {
     color: $green;
@@ -83,17 +98,18 @@
 }
 
 .card__heading__description {
-  margin-top: 3px;
+  margin-top: 5px;
 }
 
 .card__suggestions {
   counter-reset: section;
+  padding: 0 15px;
 }
 
 .card__suggestions__suggestion__add,
 .card__suggestions__suggestion {
-  border-top: 1px dashed rgba(0, 0, 0, 0.07);
-  padding: 15px;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  padding: 15px 0;
 }
 
 .card__suggestions__suggestion {
@@ -105,6 +121,7 @@
 .card__suggestions__suggestion__title {
   flex-grow: 0;
   flex-shrink: 1;
+  padding-left: 25px;
 }
 
 .card__suggestions__suggestion__vote {
@@ -129,9 +146,14 @@
 
 .card__suggestions__suggestion__link {
   font-size: 20px;
+  left: -25px;
+  position: relative;
 
   &:before {
-    color: $textColor;
+    display: inline-block;
+    width: 25px;
+    color: $green;
+    font-weight: bold;
     content: counter(section, upper-alpha) ". ";
   }
 }
@@ -193,6 +215,7 @@
   p {
     line-height: 1.35;
     color: $textColorMedium;
+    font-weight: 300;
   }
 }
 
@@ -204,9 +227,10 @@
   display: block;
   font-weight: bold;
   color: $green;
+  margin: 0 0 2px 0;
 
   span {
-    color: $textColorLight;
+    //color: $textColorLight;
     font-weight: normal;
   }
 }
