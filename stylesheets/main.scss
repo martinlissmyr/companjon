@@ -6,6 +6,7 @@
 @import "components/avatar";
 @import "components/forms";
 @import "components/day";
+@import "components/sticky-header";
 
 BODY,
 HTML {
@@ -14,7 +15,7 @@ HTML {
   background: white;
   font-family: $defaultFont;
   font-size: $defaultFontSize;
-  background: #f5f8fa;
+  background: $warmGray;
 }
 
 h1, h2, h3, p {
