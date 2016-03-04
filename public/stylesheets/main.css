@@ -52,6 +52,11 @@
   .trip-header__tools__item .button + .button {
     margin: 0 0 0 5px; }
 
+.trip-header__tools__add-participant {
+  display: inline-block;
+  line-height: 34px;
+  margin-left: 10px; }
+
 .trip-header__tools__label {
   line-height: 32px;
   margin: 0 10px 0 0; }
