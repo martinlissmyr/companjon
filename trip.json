@@ -1,0 +1,19 @@
+{
+  "place": "Hamburg",
+  "country": "Germany",
+  "participants": [
+    {
+      "name": "Martin",
+      "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/kurafire/128.jpg",
+      "candidate": true
+    },
+    {
+      "name": "Brynn",
+      "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/brynn/128.jpg"
+    },
+    {
+      "name": "You",
+      "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/hchicha/128.jpg"
+    }
+  ]
+}
