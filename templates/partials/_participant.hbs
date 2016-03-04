@@ -1,0 +1,15 @@
+<div class="participant{{#if interactive}}{{#if candidate}} participant--candidate{{/if}}{{/if}}">
+  <div class="participant__balloon">
+    <div class="participant__balloon__content">
+      <span class="participant__name">{{name}}</span>
+      {{#if interactive}}
+        {{#if candidate}}
+          <span class="participant__add">Include</span>
+        {{else}}
+          <span class="participant__remove">Exclude</span>
+        {{/if}}
+      {{/if}}
+    </div>
+  </div>
+  <img class="avatar avatar--small" src="{{avatar}}">
+</div>
